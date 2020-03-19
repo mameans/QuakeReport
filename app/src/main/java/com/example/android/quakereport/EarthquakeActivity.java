@@ -22,13 +22,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 
 public class EarthquakeActivity extends AppCompatActivity {
 
-    public static final String LOG_TAG = EarthquakeActivity.class.getName();
+    // public static final String LOG_TAG = EarthquakeActivity.class.getName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,19 +41,19 @@ public class EarthquakeActivity extends AppCompatActivity {
 
         try {
             earthquakes.add(new Earthquake(7.2, "San Francisco",
-                    new SimpleDateFormat("MMM d, yyyy").parse("July 2, 2016")));
+                    dateFormat.parse("July 2, 2016")));
             earthquakes.add(new Earthquake(6.1, "London",
-                    new SimpleDateFormat("MMM d, yyyy").parse("July 20, 2015")));
+                    dateFormat.parse("July 20, 2015")));
             earthquakes.add(new Earthquake(3.9, "Tokyo",
-                    new SimpleDateFormat("MMM d, yyyy").parse("Nov 10, 2014")));
+                    dateFormat.parse("Nov 10, 2014")));
             earthquakes.add(new Earthquake(5.4, "Mexico City",
-                    new SimpleDateFormat("MMM d, yyyy").parse("May 3, 2014")));
+                    dateFormat.parse("May 3, 2014")));
             earthquakes.add(new Earthquake(2.8, "Moscow",
-                    new SimpleDateFormat("MMM d, yyyy").parse("Jan 31, 2013")));
+                    dateFormat.parse("Jan 31, 2013")));
             earthquakes.add(new Earthquake(4.9, "Rio de Janeiro",
-                    new SimpleDateFormat("MMM d, yyyy").parse("Aug 19, 2012")));
+                    dateFormat.parse("Aug 19, 2012")));
             earthquakes.add(new Earthquake(1.6, "Paris",
-                    new SimpleDateFormat("MMM d, yyyy").parse("Oct 30, 2011")));
+                    dateFormat.parse("Oct 30, 2011")));
 
         } catch (ParseException e) {
             e.printStackTrace();
